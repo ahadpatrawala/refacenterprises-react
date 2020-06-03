@@ -1,5 +1,4 @@
 import React from 'react';
-import './App.css';
 import {Link} from 'react-router-dom';
 
 function Nav() {
@@ -31,21 +30,21 @@ function Nav() {
 
 		<nav>
 			<ul className="cd-primary-nav">
-            <Link to='/'>
+            <a href='/'>
            <li>Home</li>
-           </Link>
-           <Link to='/about'>
+           </a>
+           <a href='/about'>
            <li>About</li>
-           </Link>
-           <Link to='/projects'>
+           </a>
+           <a href='/projects'>
            <li>Projects</li>
-           </Link>
-           <Link to='/gallery'>
+           </a>
+           <a href='/gallery'>
            <li>Gallery</li>
-           </Link>
-           <Link to='/Contact'>
+           </a>
+           <a href='/Contact'>
            <li>Contact</li>
-           </Link>
+           </a>
        </ul>
 		</nav>
 
@@ -57,7 +56,7 @@ function Nav() {
 			<span></span>
 		</div>
 
-		<a id="HyperLink7" className="cd-nav-trigger" href="#"><span className="cd-icon"></span></a>
+		<a className="cd-nav-trigger" href="/#"><span className="cd-icon"></span></a>
 	</div>
   );
 }

@@ -6,6 +6,8 @@ import About from './About';
 import Projects from './Projects';
 import Gallery from './Gallery';
 import Contact from './Contact';
+import Error from './Error';
+import Message from './Message';
 import Footer from './Footer';
 
 function App() {
@@ -19,6 +21,8 @@ function App() {
       <Route path="/projects" component={Projects}/>
       <Route path="/gallery" component={Gallery}/>
       <Route path="/contact" component={Contact}/>
+      <Route path="/message" component={Message}/>
+      <Route path="/error" component={Error}/>        
       </Switch>
       <Footer/>
     </div>

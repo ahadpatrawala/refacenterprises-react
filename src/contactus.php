@@ -7,24 +7,12 @@ require './email/Exception.php';
 require './email/PHPMailer.php';
 require './email/SMTP.php';
 
-$site_key = '6LdUNPwUAAAAAE_im4yak_vBvRNP6VK0M-PNykhp';
-$secret_key = '6LdUNPwUAAAAALuc-YrwrbG_Hi69Zt7wX_AL8GFR';
 
 if (isset($_POST['submit'])){
     $name= $_POST['name'];
     $email= $_POST['email'];
     $body= $_POST['body'];
 	$phone=$_POST['phone'];
-	$response = $POST['g-recaptcha-response'];
-	$payload = file_get_contents('https://www.google.com/recaptcha/api/siteverify?secret='.$secret_key.'&response='.$response);
-	$result = json_decode($payload,true);
-	if ($result['success'] != 1) {
-              // Failure case
-              $error = 'Sorry. Missing validation!!!';
-          } else {
-              // Success case
-              $success = 'Thank you!';
-          }
 	
 	
 // Instantiation and passing `true` enables exceptions
@@ -50,16 +38,16 @@ try {
     $mail->Body    = 'Message from: '.$name.'<br> Phone: '.$phone.' <br> Email: '.$email.'<br> Message: '.$body;
 
     $mail->send();
-	header('Location:message.html');
+	header('Location:/message');
 	}
 	
 catch (Exception $e) {
-	header('Location:error.html');
+	header('Location:/error');
 	echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
 	//$_SESSION['err'] = $mail->ErrorInfo;
 }
 }
 else{
     echo 'Message not sent';
-	header('Location:error.html');
+	header('Location:/error');
 }
