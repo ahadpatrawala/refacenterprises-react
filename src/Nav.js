@@ -20,9 +20,9 @@ function Nav() {
 			</div>
 			<div className="clearfix"></div>
 			<div className="logo">
-                <Link id="logohome" to="/">Refac Enterprises<img id="logo" src={require("./images/logonew.png")} alt="Refac Enterprises" align="left" style={{height:'100px' ,width:'100px'}} />
+                <a id="logohome" href="/">Refac Enterprises<img id="logo" src={require("./images/logonew.png")} alt="Refac Enterprises" align="left" style={{height:'100px' ,width:'100px'}} />
                     <h5 style={{color: '#9E9E9E', textAlign: 'left', position: 'relative', top: '3px', left: '0px'}}>Manufacturers of all kinds of refrigeration, air-conditioning systems & customized fabrication works</h5>
-			    </Link>
+			         </a>
             </div>
 
             <div className="clearfix"></div>
@@ -42,7 +42,7 @@ function Nav() {
            <a href='/gallery'>
            <li>Gallery</li>
            </a>
-           <a href='/Contact'>
+           <a href='/contact'>
            <li>Contact</li>
            </a>
        </ul>
@@ -56,7 +56,7 @@ function Nav() {
 			<span></span>
 		</div>
 
-		<a className="cd-nav-trigger" href="/#"><span className="cd-icon"></span></a>
+		<a className="cd-nav-trigger" href="#"><span className="cd-icon"></span></a>
 	</div>
   );
 }
