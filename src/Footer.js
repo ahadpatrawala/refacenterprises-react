@@ -43,7 +43,7 @@ function Footer() {
         </div>
         </div>
 <div className="footer-grid-4 copyright">
-    <p>&copy; Refac Enterprises. All Rights Reserved | Design by <a id="HyperLink7" href="http://w3layouts.com"> W3layouts </a></p>
+    <p>&copy; Refac Enterprises. All Rights Reserved</p>
 </div>
 
 </div>
